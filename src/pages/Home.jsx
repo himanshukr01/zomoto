@@ -11,18 +11,16 @@ const Home = () => {
 
   useEffect(() => {
     const storedUser = localStorage.getItem('username');
-    if (!storedUser) {
-      navigate('/login');
-    } else {
-      setUsername(storedUser);
-    }
+
+   
+   
   })
 
   return (
     <div className="container">
       <Navbar />
-      <h2 className="welcome-text">Welcome, {username}</h2>
-      <button onClick={() => {
+      <a href="/Home2" >Welcome to ZOMOTO!</a>
+      <button style={{width: '10%', position: 'fixed', top: 60, left:1220, zIndex: 1000}} onClick={() => {
         localStorage.removeItem('username');
         navigate('/login');
       }}>Logout</button>

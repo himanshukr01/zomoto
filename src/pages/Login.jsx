@@ -20,6 +20,10 @@ const Login = ({ setIsLoggedIn }) => { // Fix the prop destructuring
     }
   };
 
+  const returnToLogin = () => {
+    navigate('/register');
+  };
+
   return (
 
     <div className='container'>
@@ -27,9 +31,10 @@ const Login = ({ setIsLoggedIn }) => { // Fix the prop destructuring
       <h2>Login</h2>
       <div style={{gap: '1rem'}}>
 
-        <input class='text-bg-warning' type="email" placeholder='Email' style={{ width: '100%' }} onChange={(e) => setEmail(e.target.value)} />
-        <input class='text-bg-warning' type="password" placeholder='Password' style={{ width: '100%' }} onChange={(e) => setPassword(e.target.value)} />
-        <button class='text-bg-success' style={{ width: '100%' }} onClick={handleLogin}>Login</button>
+        <input class='text-bg-warning border' type="email" placeholder='Email' style={{ width: '100%' }} onChange={(e) => setEmail(e.target.value)} />
+        <input class='text-bg-warning border' type="password" placeholder='Password' style={{ width: '100%' }} onChange={(e) => setPassword(e.target.value)} />
+        <button class='text-bg-success border' style={{ width: '100%' }} onClick={handleLogin}>Login</button>
+        <button class='text-bg-success border' style={{ width: '100%' }} onClick={returnToLogin} >Sign Up</button>
       </div>
     </div>
   );
