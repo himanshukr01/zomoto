@@ -21,13 +21,16 @@ const Login = ({ setIsLoggedIn }) => { // Fix the prop destructuring
   };
 
   return (
-    
+
     <div className='container'>
       <Navbar />
       <h2>Login</h2>
-      <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
-      <input type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
-      <button onClick={handleLogin}>Login</button>
+      <div style={{gap: '1rem'}}>
+
+        <input class='text-bg-warning' type="email" placeholder='Email' style={{ width: '100%' }} onChange={(e) => setEmail(e.target.value)} />
+        <input class='text-bg-warning' type="password" placeholder='Password' style={{ width: '100%' }} onChange={(e) => setPassword(e.target.value)} />
+        <button class='text-bg-success' style={{ width: '100%' }} onClick={handleLogin}>Login</button>
+      </div>
     </div>
   );
 };

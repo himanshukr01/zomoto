@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+import Navbar from "../components/Navbar";
 
 const Register = ({ setIsLoggedIn }) => {
   const [username, setUsername] = useState("");
@@ -18,6 +19,7 @@ const Register = ({ setIsLoggedIn }) => {
 
   return (
     <div className="container">
+      <Navbar />
       <h2>Register</h2>
       <input
         type="text"

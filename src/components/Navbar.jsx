@@ -2,11 +2,11 @@ import React from 'react'
 
 const Navbar = () => {
     return (
-        <div>
-            <nav class="navbar bg-primary navbar-expand-lg">
-                <div class="container-fluid ">
+        <div style={{width: '100%', position: 'fixed', top: 0, left:0, zIndex: 1000}}>
+            <nav class="navbar bg-primary navbar-expand-lg w-100">
+                <div class="container-fluid">
                     <a class="navbar-brand" href="#">
-                        <img src="/vite.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top" />
+                        <img src="/vite.svg" alt="Logo" width="100" height="24" class="d-inline-block align-text-top" />
                         QUICK
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">

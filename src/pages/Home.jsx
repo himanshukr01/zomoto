@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
+import Navbar from "../components/Navbar";
 
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
 
   return (
     <div className="container">
+      <Navbar />
       <h2 className="welcome-text">Welcome, {username}</h2>
       <button onClick={() => {
         localStorage.removeItem('username');
