@@ -2,6 +2,7 @@ import { useState } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import "../App.css";
+import Navbar from '../components/Navbar';
 
 const Login = ({ setIsLoggedIn }) => { // Fix the prop destructuring
   const [email, setEmail] = useState('');
@@ -20,7 +21,9 @@ const Login = ({ setIsLoggedIn }) => { // Fix the prop destructuring
   };
 
   return (
-    <div className='container'> {/* Ensure className is used */}
+    
+    <div className='container'>
+      <Navbar />
       <h2>Login</h2>
       <input type="email" placeholder='Email' onChange={(e) => setEmail(e.target.value)} />
       <input type="password" placeholder='Password' onChange={(e) => setPassword(e.target.value)} />
